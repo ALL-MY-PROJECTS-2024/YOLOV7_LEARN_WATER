@@ -1,0 +1,123 @@
+#--------------------------------------------------
+# 기본 세팅
+#--------------------------------------------------
+#----------------------
+# 설치
+#----------------------
+# git clone 
+# https://github.com/RizwanMunawar/yolov7-segmentation.git
+
+#----------------------
+# yolov7-seg.pt 받기
+#----------------------
+https://github.com/WongKinYiu/yolov7/releases/download/v0.1/yolov7-seg.pt
+
+
+#----------------------
+# 확인 
+#----------------------
+python segment/predict.py --weights yolov7-seg.pt --source "football1.mp4" --view-img 
+
+
+
+#--------------------------------------------------
+# 학습하기 water
+#--------------------------------------------------
+#----------------------
+# data/water.yaml 확인
+#----------------------
+train: ./data/water/images/train  # 
+val: ./data/water/images/val      # 
+test: ./data/water/images/test    # 
+
+nc: 6
+
+names: ['driveway', 'pole', 'pier', 'rain_gutter', 'water_area', 'water_side']
+
+#----------------------
+# cfg/training/water.yaml
+#----------------------
+1 yoov7-seg.yaml 받기
+ https://github.com/laitathei/YOLOv7-Pytorch-Segmentation/blob/master/data/yolov7-seg.yaml
+
+2 복사해서  yoov7-seg.yaml을 water.yaml 로 복사
+
+3 water.yaml 에 nc : 6 추가하기
+
+# Parameters
+nc: 6  # number of classes!!!!!!!!!!!!!!!!!!!!!!!!!!
+depth_multiple: 1.0  # model depth multiple
+width_multiple: 1.0  # layer channel multiple
+anchors:
+  - [12,16, 19,36, 40,28]  # P3/8
+  - [36,75, 76,55, 72,146]  # P4/16
+  - [142,110, 192,243, 459,401]  # P5/32
+.....
+
+
+
+#----------------------
+# dataset_train / dataset_val 준비
+#----------------------
+
+
+#----------------------
+#
+#----------------------
+
+
+
+
+
+
+
+#--------------------------------------------
+# 파인튜닝 - 학습
+#--------------------------------------------
+python segment/train.py --epochs 10 --workers 4  --device cpu  --batch-size 10  --data data/water.yaml --img 320 --cfg cfg/training/water.yaml --weights 'yolov7-seg.pt' --name yolov7_seg_haed_finetuned --hyp hyp.scratch-high.yaml
+
+python segment/train.py --epochs 15 --workers 4  --device cpu  --batch-size 10  --data data/water.yaml --img 320 --cfg cfg/training/water.yaml --weights 'yolov7-seg.pt' --name yolov7_seg_haed_finetuned --hyp hyp.scratch-high.yaml
+
+python segment/train.py --epochs 5 --workers 4  --device cpu  --batch-size 10  --data data/water.yaml --img 320 --cfg cfg/training/water.yaml --weights 'yolov7-tiny.pt' --name yolov7_seg_haed_finetuned --hyp hyp.scratch-high.yaml
+
+
+학습테스트 예시
+https://github.com/roboflow/notebooks/blob/main/notebooks/train-yolov7-instance-segmentation-on-custom-data.ipynb
+
+%cd {HOME}/yolov7/seg
+
+python segment/predict.py --weights best.pt --conf 0.25 --source test.jpg
+
+
+
+#--------------------------------------------------
+# 학습이후 테스트
+#--------------------------------------------------
+
+
+# 학습결과 테스트
+python segment/predict.py --weights best.pt --view-img --img-size 320 --source https://safecity.busan.go.kr/playlist/cnRzcDovLzEwLjEuMjEwLjE4MToxMDAyOS9kZWlk/index.m3u8
+
+
+
+
+python segment/predict.py --weights best.pt --source https://safecity.busan.go.kr/playlist/cnRzcDovL2d1ZXN0Omd1ZXN0QDEwLjEuMjEwLjIxMDo1NTQvdXM2NzZyM0RMY0RuczYwdE1EQTVMVEk9/index.m3u8  --view-img --img-size 320
+
+
+
+
+#--------------------------------------------------
+# 예측 영상 만들기
+#--------------------------------------------------
+yolov7 세그먼테이션된 이미지-> ConvLSTM 으로 넣고 예측된결과이미지/영상을 다시 -> yolov7 세그먼테이션으로 변환
+
+
+#--------------------------------------------------
+# 학습 math.yaml_TEST 하기 
+#--------------------------------------------------
+python segment/train.py --epochs 5 --workers 4 --device cpu --batch-size 10 --data data/math.yaml --cfg cfg/training/math.yaml --weights 'yolov7-seg.pt' --name yolov7_seg_math_finetuned --hyp hyp.scratch-high_math.yaml --img 320
+
+#--------------------------------------------------
+# 확인 math.yaml
+#--------------------------------------------------
+python segment/predict.py --weights math.pt --source "math_test_1.jpg" --view-img     

@@ -1,0 +1,324 @@
+{
+    "licenses": [
+        {
+            "name": "",
+            "id": 0,
+            "url": ""
+        }
+    ],
+    "info": {
+        "name": null,
+        "data_created": null,
+        "description": null,
+        "url": null,
+        "10m_rainfall": 0.5,
+        "1hr_rainfall": 3.5,
+        "3hr_rainfall": 4,
+        "rainfallobservation_position_lat": 35.16944,
+        "rainfallobservation_position_lon": 129.97505,
+        "gutter_level": null,
+        "gutter_height": null,
+        "gutter_position_lat": null,
+        "gutter_position_lon": null,
+        "river_level": 0,
+        "bridge_name": "Sebyeong",
+        "riverobservation_position_lat": 35.196918,
+        "riverobservation_position_lon": 129.082638,
+        "tide_level": null,
+        "tideobservation_position_lat": null,
+        "tideobservation_position_lon": null,
+        "danger_level": 1
+    },
+    "categories": [
+        {
+            "id": 1,
+            "name": "driveway",
+            "supercategory": ""
+        },
+        {
+            "id": 2,
+            "name": "pole",
+            "supercategory": ""
+        },
+        {
+            "id": 3,
+            "name": "pier",
+            "supercategory": ""
+        },
+        {
+            "id": 4,
+            "name": "water_side",
+            "supercategory": ""
+        },
+        {
+            "id": 5,
+            "name": "water_area",
+            "supercategory": ""
+        },
+        {
+            "id": 6,
+            "name": "rain_gutter",
+            "supercategory": ""
+        }
+    ],
+    "images": [
+        {
+            "id": 1,
+            "width": 1280,
+            "height": 720,
+            "file_name": "E__006_112^20230901-050000-20230901-060000_000013.jpg",
+            "license": 0,
+            "flickr_url": "",
+            "coco_url": "",
+            "date_captured": 0
+        }
+    ],
+    "annotations": [
+        {
+            "id": 1,
+            "image_id": 1,
+            "category_id": 4,
+            "segmentation": [
+                [
+                    437.43,
+                    234.81,
+                    440.15,
+                    295.82,
+                    448.43,
+                    294.18,
+                    491.57,
+                    308.56,
+                    566.73,
+                    315.1,
+                    730.78,
+                    345.82,
+                    812.48,
+                    349.08,
+                    890.91,
+                    366.08,
+                    983.07,
+                    390.26,
+                    1280.0,
+                    445.5,
+                    1280.0,
+                    445.5,
+                    1280.0,
+                    445.5,
+                    1280.0,
+                    369.12,
+                    1058.89,
+                    323.59,
+                    886.23,
+                    293.09,
+                    724.47,
+                    263.14,
+                    578.5,
+                    247.34
+                ]
+            ],
+            "area": 63092.0,
+            "bbox": [
+                437.43,
+                234.81,
+                842.57,
+                210.69
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        },
+        {
+            "id": 2,
+            "image_id": 1,
+            "category_id": 4,
+            "segmentation": [
+                [
+                    217.0,
+                    348.6,
+                    226.0,
+                    363.1,
+                    455.62,
+                    517.71,
+                    523.59,
+                    551.7,
+                    651.04,
+                    611.83,
+                    690.26,
+                    608.56,
+                    1067.38,
+                    703.33,
+                    1136.21,
+                    720.0,
+                    1136.21,
+                    720.0,
+                    1136.21,
+                    720.0,
+                    197.94,
+                    720.0,
+                    122.29,
+                    568.69,
+                    83.72,
+                    459.54,
+                    43.2,
+                    381.76,
+                    32.74,
+                    328.17,
+                    127.52,
+                    283.07,
+                    204.64,
+                    332.74,
+                    216.4,
+                    330.13
+                ]
+            ],
+            "area": 172931.0,
+            "bbox": [
+                32.74,
+                283.07,
+                1103.47,
+                436.93
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        },
+        {
+            "id": 3,
+            "image_id": 1,
+            "category_id": 3,
+            "segmentation": [
+                [
+                    265.59,
+                    244.78,
+                    266.08,
+                    256.27,
+                    266.08,
+                    272.61,
+                    432.74,
+                    299.41,
+                    440.15,
+                    295.82,
+                    437.43,
+                    234.81,
+                    436.55,
+                    226.25,
+                    415.37,
+                    228.9,
+                    414.23,
+                    219.44
+                ]
+            ],
+            "area": 9494.0,
+            "bbox": [
+                265.59,
+                219.44,
+                174.56,
+                79.97
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        },
+        {
+            "id": 4,
+            "image_id": 1,
+            "category_id": 3,
+            "segmentation": [
+                [
+                    166.87,
+                    265.21,
+                    127.52,
+                    283.07,
+                    204.64,
+                    332.74,
+                    215.6,
+                    330.5,
+                    206.6,
+                    267.38,
+                    195.99,
+                    268.61,
+                    195.61,
+                    263.7
+                ]
+            ],
+            "area": 3353.0,
+            "bbox": [
+                127.52,
+                263.7,
+                88.08,
+                69.04
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        },
+        {
+            "id": 5,
+            "image_id": 1,
+            "category_id": 5,
+            "segmentation": [
+                [
+                    206.6,
+                    267.38,
+                    217.4,
+                    347.1,
+                    224.9,
+                    363.46,
+                    455.62,
+                    517.71,
+                    523.59,
+                    551.7,
+                    651.04,
+                    611.83,
+                    690.26,
+                    608.56,
+                    1067.38,
+                    703.33,
+                    1136.21,
+                    720.0,
+                    1280.0,
+                    720.0,
+                    1280.0,
+                    445.5,
+                    983.07,
+                    390.26,
+                    890.91,
+                    366.08,
+                    812.48,
+                    349.08,
+                    730.78,
+                    345.82,
+                    566.73,
+                    315.1,
+                    491.57,
+                    308.56,
+                    448.43,
+                    294.18,
+                    432.74,
+                    299.41,
+                    266.08,
+                    272.61,
+                    266.08,
+                    256.27,
+                    229.48,
+                    253.66
+                ]
+            ],
+            "area": 268325.0,
+            "bbox": [
+                206.6,
+                253.66,
+                1073.4,
+                466.34
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        }
+    ]
+}

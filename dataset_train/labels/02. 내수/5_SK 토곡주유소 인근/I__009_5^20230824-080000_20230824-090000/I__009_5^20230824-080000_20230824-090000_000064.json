@@ -1,0 +1,136 @@
+{
+    "licenses": [
+        {
+            "name": "",
+            "id": 0,
+            "url": ""
+        }
+    ],
+    "info": {
+        "name": null,
+        "data_created": null,
+        "description": null,
+        "url": null,
+        "10m_rainfall": 0,
+        "1hr_rainfall": 0,
+        "3hr_rainfall": 6.5,
+        "rainfallobservation_position_lat": 35.187885,
+        "rainfallobservation_position_lon": 129.104833,
+        "gutter_level": 139,
+        "gutter_height": 580,
+        "gutter_position_lat": 35.187885,
+        "gutter_position_lon": 129.104833,
+        "river_level": 1.251,
+        "bridge_name": "Sebyeong",
+        "riverobservation_position_lat": 35.196918,
+        "riverobservation_position_lon": 129.082638,
+        "tide_level": null,
+        "tideobservation_position_lat": null,
+        "tideobservation_position_lon": null,
+        "danger_level": 0
+    },
+    "categories": [
+        {
+            "id": 1,
+            "name": "driveway",
+            "supercategory": ""
+        },
+        {
+            "id": 2,
+            "name": "pole",
+            "supercategory": ""
+        },
+        {
+            "id": 3,
+            "name": "pier",
+            "supercategory": ""
+        },
+        {
+            "id": 4,
+            "name": "water_side",
+            "supercategory": ""
+        },
+        {
+            "id": 5,
+            "name": "water_area",
+            "supercategory": ""
+        },
+        {
+            "id": 6,
+            "name": "rain_gutter",
+            "supercategory": ""
+        }
+    ],
+    "images": [
+        {
+            "id": 1,
+            "width": 1280,
+            "height": 720,
+            "file_name": "I__009_5^20230824-080000_20230824-090000_000064.jpg",
+            "license": 0,
+            "flickr_url": "",
+            "coco_url": "",
+            "date_captured": 0
+        }
+    ],
+    "annotations": [
+        {
+            "id": 1,
+            "image_id": 1,
+            "category_id": 6,
+            "segmentation": [
+                [
+                    538.68,
+                    341.66,
+                    543.9,
+                    460.6,
+                    778.7,
+                    455.1,
+                    763.2,
+                    338.7
+                ]
+            ],
+            "area": 27078.0,
+            "bbox": [
+                538.68,
+                338.7,
+                240.02,
+                121.9
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        },
+        {
+            "id": 2,
+            "image_id": 1,
+            "category_id": 1,
+            "segmentation": [
+                [
+                    0.0,
+                    337.2,
+                    441.8,
+                    331.7,
+                    1278.8,
+                    325.5,
+                    1280.0,
+                    719.1,
+                    1.2,
+                    720.0
+                ]
+            ],
+            "area": 497367.0,
+            "bbox": [
+                0.0,
+                325.5,
+                1280.0,
+                394.5
+            ],
+            "iscrowd": 0,
+            "attributes": {
+                "occluded": false
+            }
+        }
+    ]
+}
