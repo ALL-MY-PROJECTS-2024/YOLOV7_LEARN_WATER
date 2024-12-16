@@ -115,7 +115,8 @@ yolov7 세그먼테이션된 이미지-> ConvLSTM 으로 넣고 예측된결과�
 #--------------------------------------------------
 # 학습 math.yaml_TEST 하기 
 #--------------------------------------------------
-python segment/train.py --epochs 5 --workers 4 --device cpu --batch-size 10 --data data/math.yaml --cfg cfg/training/math.yaml --weights 'yolov7-seg.pt' --name yolov7_seg_math_finetuned --hyp hyp.scratch-high_math.yaml --img 320
+python segment/train.py --epochs 5 --workers 4 --device cpu --batch-size 10 --data data/math.yaml --cfg cfg/training/math.yaml --weights 'yolov7-seg.pt' --name yolov7_seg_math_finetuned --hyp hyp.scratch-high_math.yaml --img 2400
+
 
 #--------------------------------------------------
 # 확인 math.yaml

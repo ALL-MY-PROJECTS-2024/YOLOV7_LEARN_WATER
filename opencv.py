@@ -77,7 +77,7 @@ def process_stream(source, stop_event):
 
     # Load model
     device = select_device("cpu")
-    model = DetectMultiBackend("best_1.pt", device=device, dnn=False, data="data/water.yaml", fp16=False)
+    model = DetectMultiBackend("best.pt", device=device, dnn=False, data="data/water.yaml", fp16=False)
     stride, names, pt = model.stride, model.names, model.pt
     imgsz = check_img_size((320, 320), s=stride)  # check image size
     
@@ -200,8 +200,9 @@ def process_stream(source, stop_event):
                     if save_img or save_crop or view_img:  # Add bbox to image
                         c = int(cls)  # integer class
                         #라벨표시 여부
-                        #label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
-                        #annotator.box_label(xyxy, label, color=colors(c, True))
+                        label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
+                        annotator.box_label(xyxy, label, color=colors(c, True))
+                       
                     if save_crop:
                         save_one_box(xyxy, imc, file=save_dir / 'crops' / names[c] / f'{p.stem}.jpg', BGR=True)
             

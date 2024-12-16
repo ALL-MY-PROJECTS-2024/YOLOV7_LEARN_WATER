@@ -1,0 +1,92 @@
+{
+    "INFO": {
+        "NAME": "Suyeong_771_100_00771",
+        "DATA_CREATED": "2023-10-13",
+        "DESCRIPTION": "없음",
+        "URL": "https://safecity.busan.go.kr",
+        "1HR_RAINFALL": 111.35,
+        "RAINFALLOBSERVATION_POSITION": "부산",
+        "RIVEROBSERVATION_POSITION": "없음",
+        "BRIDGE_NAME": "없음",
+        "TIDEOBSERVATION_POSITION": "부산항",
+        "OBSERVATIONAL_TIDE": 0.735,
+        "24HR_RAINFALL": 354.39
+    },
+    "CATEGORIES": {
+        "ID": "Suyeong_771_100_00771",
+        "NAME": "Suyeong_100",
+        "CATEGORY": 2
+    },
+    "IMAGE": {
+        "ID": "Suyeong_771_100_00771",
+        "WIDTH": "2400",
+        "HEIGHT": "1600",
+        "FILE_NAME": "Suyeong_771_100_00771"
+    },
+    "ANNOTATIONS": [
+        {
+            "ID": "4",
+            "IMAGE_ID": "Suyeong_771_100_00771",
+            "CATEGORY_ID": "Suyeong_771_100_00771",
+            "SEGMENTATION": "폴리곤",
+            "COORDINATE": [
+                [
+                    0.0,
+                    1522.840040000156
+                ],
+                [
+                    72.83076000027359,
+                    1470.64148000069
+                ],
+                [
+                    0.0,
+                    1418.442920000292
+                ],
+                [
+                    0.0,
+                    0.0
+                ],
+                [
+                    2400.0,
+                    0.0
+                ],
+                [
+                    2400.0,
+                    1600.0
+                ],
+                [
+                    0.0,
+                    1600.0
+                ],
+                [
+                    0.0,
+                    1522.840040000156
+                ]
+            ]
+        },
+        {
+            "ID": "7",
+            "IMAGE_ID": "Suyeong_771_100_00771",
+            "CATEGORY_ID": "Suyeong_771_100_00771",
+            "SEGMENTATION": "폴리곤",
+            "COORDINATE": [
+                [
+                    0.0,
+                    1522.840040000156
+                ],
+                [
+                    0.0,
+                    1418.442920000292
+                ],
+                [
+                    72.83076000027359,
+                    1470.64148000069
+                ],
+                [
+                    0.0,
+                    1522.840040000156
+                ]
+            ]
+        }
+    ]
+}
